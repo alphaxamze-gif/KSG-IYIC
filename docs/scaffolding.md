@@ -1,49 +1,76 @@
-# KSG-IYIC – Project Scaffolding & Team Standards
+KSG-IYIC – Project Scaffolding & Team Standards
+This is the single source of truth for the entire team and any AI assistants.
+All code, design, and features must follow this document so the final product looks and behaves consistently.
 
-> **This is the single source of truth** for the entire team and any AI assistants.
-> All code, design, and features must follow this document so the final product looks and behaves consistently.
+1. Project Overview
+Name: KSG-Isiolo Youth Innovation Centre (KSG-IYIC)
 
----
+Purpose: Official website for the youth empowerment hub in Isiolo County, Kenya.
 
-## 1. Project Overview
+Goal: Clean, modern, consistent Angular website that replaces the previous template-based version.
+Core pages that must exist:
 
-**Name:** KSG-Isiolo Youth Innovation Centre (KSG-IYIC)  
-**Purpose:** Official website for the youth empowerment hub in Isiolo County, Kenya.  
-**Goal:** Clean, modern, consistent Angular website that replaces the previous template-based version.
+Home
+About Us
+Youth Skills Programs
+Hub Youth Spaces
+Gallery
+Become a Volunteer
+Contact Us
 
-**Core pages that must exist:**
-- Home
-- About Us
-- Youth Skills Programs
-- Hub Youth Spaces
-- Gallery
-- Become a Volunteer
-- Contact Us
 
----
+2. Tech Stack (Do not change without team agreement)
 
-## 2. Tech Stack (Do not change without team agreement)
 
-| Layer              | Choice                          | Notes                                      |
-|--------------------|---------------------------------|--------------------------------------------|
-| Framework          | Angular (standalone components) | Current version in package.json            |
-| Styling            | Tailwind CSS v3 + plain CSS     | **No SCSS**                                |
-| UI Components      | Custom + Tailwind utilities     | No Bootstrap, no Angular Material          |
-| State / Data       | ContentService (static for now) | All content lives here                     |
-| Routing            | Angular Router (lazy loaded)    | See `app.routes.ts`                        |
-| Icons              | Inline SVG or simple emoji      | Keep light                                 |
-| Font               | Inter (Google Fonts)            | Already linked in `index.html`             |
 
----
 
-## 3. Design System (Must be followed by everyone)
 
-### 3.1 Colors
 
-Defined in `tailwind.config.js`:
 
-```js
-primary: {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LayerChoiceNotesFrameworkAngular (standalone components)Current version in package.jsonStylingTailwind CSS v3 + plain CSSNo SCSSUI ComponentsCustom + Tailwind utilitiesNo Bootstrap, no Angular MaterialState / DataContentService (static for now)All content lives hereRoutingAngular Router (lazy loaded)See app.routes.tsIconsInline SVG or simple emojiKeep lightFontInter (Google Fonts)Already linked in index.html
+
+3. Design System (Must be followed by everyone)
+3.1 Colors
+Defined in tailwind.config.js:
+JavaScriptprimary: {
   DEFAULT: '#C9A227',   // Main gold
   dark:    '#A6851F',
   light:   '#E8D48B',
@@ -68,10 +95,12 @@ Use Tailwind text size utilities (text-sm, text-base, text-lg, text-xl, text-2xl
 
 3.3 Spacing & Layout
 Use these reusable classes (already in src/styles.css):
-CSS.container-custom   → max-w-7xl + horizontal padding
-.section-padding    → py-16 md:py-24
-.btn-primary        → gold filled button
-.btn-outline        → gold outlined button
+
+.container-custom → max-w-7xl + horizontal padding
+.section-padding → py-16 md:py-24
+.btn-primary → gold filled button
+.btn-outline → gold outlined button
+
 Always wrap page sections with:
 HTML<section class="section-padding">
   <div class="container-custom">
@@ -215,7 +244,7 @@ Programs
 
 Filterable list by category
 Program cards (image, title, duration, category, rating)
-“All Programs” + category filters
+"All Programs" + category filters
 
 Spaces
 
@@ -294,4 +323,3 @@ Last updated: 2026-10-19
 
 Maintained by: Project Lead + Team
 If anything in this document needs to change, open a discussion or PR first so the whole team stays aligned.
-text
