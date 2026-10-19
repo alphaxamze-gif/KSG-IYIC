@@ -1,1 +1,45 @@
-<p>header works!</p>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="KSG-IYIC home">
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span class="brand-copy">
+        <strong>KSG-IYIC</strong>
+        <span>Isiolo Youth Innovation Centre</span>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="primary-navigation"
+      (click)="toggleMenu()"
+    >
+      <span class="sr-only">{{ menuOpen() ? 'Close navigation menu' : 'Open navigation menu' }}</span>
+      <span aria-hidden="true">{{ menuOpen() ? '✕' : '☰' }}</span>
+    </button>
+
+    <nav
+      id="primary-navigation"
+      class="primary-navigation"
+      [class.is-open]="menuOpen()"
+      aria-label="Main navigation"
+    >
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+          (click)="closeMenu()"
+        >
+          {{ item.label }}
+        </a>
+      }
+      <a class="volunteer-link" routerLink="/become-a-volunteer" (click)="closeMenu()">
+        Get involved
+      </a>
+    </nav>
+  </div>
+</header>
